@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Billing.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Billing</title>
+  </head>
+  <body>
+    <div class="billing">
+      <div class="billing-form">
+        <form method="POST" name="billing-sheet" action="confirm.html">
+          <div class="basicDetail">
+            <label class="head">Payment</label>
+            <input type="text" name="Name" placeholder="Name" />
+            <input type="email" name="Email" placeholder="Email" />
+            <input type="date" name="DOB" placeholder="Date Of Birth" />
+          </div>
+          <!-- <div class="payment-mode">
+          <button id="card"  onclick="card()">Card</button>
+          <button id="upi" onclick="upi()">UPI</button>
+        </div> -->
+          <div class="card-details" id="c-details">
+            <input type="number" name="Card Number" placeholder="Card Number" />
+            <input type="password" name="CVV" placeholder="CVV" />
+            <div class="expiry-label">
+              <label class="expiry">Expiry Date</label>
+            </div>
+            <div class="expiryDate">
+              <input type="number" name="Month" placeholder="Month" />
+              <input type="number" name="Year" placeholder="Year" />
+            </div>
+            <input type="number" name="OTP" placeholder="OTP" id="otp" />
+          </div>
+          <!-- <div class="upi-details" id="u-details"  >
+            <input type="text" name="UPI ID" placeholder="UPI ID" />
+            <label>OR Scan QR</label>
+            <div class="qr">
+              <img src="images/qr.png" />
+            </div>
+          </div> -->
+          <div class="btn">
+            <button>Pay</button>
+          </div>
+          <div class="final-confirm">
+            <a href="confirm.html">Click Here Confirm Order</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyHgVrD2PevG2Jr817vvXLceOLeeWmcGe-NyKrUPhyuAX4bg-nhYIC8UJyC5jXgaGxF_Q/exec";
+      const form = document.forms["billing-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => alert("Payment Successfull"))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>

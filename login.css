@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: bolder;
+    
+  }
+ body{
+  background: #fffbd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ }
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+    
+  }
+
+  .login_form {
+    background: white;
+    padding: 25px;
+    border-radius: 50px;
+    width: 400px;
+   
+  }
+
+  .login_form .title {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #ed2c31;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-bottom: 50px;
+  }
+  
+  .form_wrap .input_wrap {
+    margin-bottom: 20px;
+  }
+
+  .form_wrap .input_wrap label {
+    display: block;
+    margin-bottom: 3px;
+  }
+  .form_wrap input  {
+    width: 100%;
+    border-radius: 3px;
+    border: 1.3px solid #9597a6;
+    padding: 10px;
+    outline: none;
+  }
+
+  .form_wrap .login_btn {
+    text-align: center;
+    width: 100%;
+    background: #ed2c31;
+    padding: 10px;
+    border: 1px solid red;
+    color: white;
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .form_wrap .login_btn:hover {
+    color: #ed2c31;
+    background-color: white;
+  }
+
+  .form_wrap p {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+  }
+  .form_wrap a {
+     
+      display: block;
+      text-align: center;
+      width: 30%;
+      margin-left: 122px;
+      background: #ed2c31;
+      padding: 10px;
+      border: 1px solid #ed2c31;
+      color: white;
+      font-size: 15px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+   
+  .form_wrap a:hover{
+     
+     background-color: white;
+     color: #ed2c31;
+
+  }   

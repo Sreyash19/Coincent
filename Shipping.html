@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shipping.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+    rel="stylesheet"
+  />
+    <title>Ship    </title>
+</head>
+<body>
+    <div class="shipping">
+        <div class="bg">
+            <img src="images/delivery.jpg">
+        </div>
+        <div class="shipping-form">
+            <form method="POST" name="shipping-sheet">
+            <label>Shipping Info</label>
+            <input type="text" name="Name"  placeholder="Name">
+            <input type="number"  name="Number" placeholder="Number">
+            <input type="text"  name="Address" placeholder="Address">
+            <input type="text"  name="State" placeholder="State">
+            <input type="text"  name="City" placeholder="City">
+            <input type="number"  name="Pincode" placeholder="Pin Code">
+            <div class="btn">
+                <button>Confirm</button>
+              
+        </div>
+        <div class="pay-page">
+            <a href="Billing.html">Pay Here</a>
+        </div>
+        
+        </form>
+        </div>  
+    </div>
+    <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbysnEbwjDCJNhVdF_Di7RAJFZ-MYv9DO4PRdS6VRsabZS4TRy8v2Po42zlc3bsM-95Ruw/exec'
+        const form = document.forms['shipping-sheet']
+        
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Your Shipping Details are recorded"))
+            .catch(error => console.error('Error!', error.message))
+        })</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</body>
+</html>

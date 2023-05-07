@@ -1,0 +1,108 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    font-family: "Raleway", sans-serif;
+}
+.billing{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+   border-radius: 10px;
+    width: 450px;
+    margin : auto;
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+} 
+.billing-form{
+    margin-left: 10px;
+    padding: 25px;
+    height: 528px;
+}
+input{
+    display: block;
+    margin-top: 18px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(245, 240, 240);
+    width: 320px;
+}
+.basicDetail label{
+    font-size: 25px;
+    font-weight: 900;
+  display: block;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    color: #ed2c31;
+    letter-spacing: 5px;
+}
+.payment-mode{
+    display: flex;
+    justify-content: space-between;
+}
+.payment-mode button{
+    width: 165px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.expiry-label  {
+    margin-top: 15px;
+   
+}
+.expiryDate{
+    display: flex;
+    justify-content: space-between;
+}
+.expiryDate input{
+    width: 140px;
+}
+ 
+.upi-details label{
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    font-size: 15px;
+}
+.qr img{
+    display: block;
+    margin: auto;
+}
+button{
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ed2c31;
+    border: 1px solid #ed2c31;
+    cursor: pointer;
+}
+button:hover{
+    background-color: white;
+    color: #ed2c31;
+    transition: 0.6s;
+}
+.btn  {
+    display: block;
+    text-align: center;
+  
+}
+.btn button{
+    width: 150px;
+}
+.final-confirm{
+    text-align: center;
+}
+.final-confirm a{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #ed2c31;
+    font-weight: 900;
+}

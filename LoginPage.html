@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+   
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="login_form">
+        <div class="title">
+          <label>Login</label>
+        </div>
+
+        <form  method="POST" name="login-sheet" >
+           
+          <div class="form_wrap">
+            <div class="input_wrap">
+              <label for="username">Username</label>
+              <input type="text" name = "Username" id="username" />
+            </div>
+
+            <div class="input_wrap">
+              <label for="password">Password</label>
+              <input type="password" name = "Password" id="password" />
+            </div>
+
+            <div class="input_wrap">
+              <input type="submit" value="Login" class="login_btn" />
+            </div>
+            <div class="input_wrap">
+              <p>Don't Have Account! Sign Up Here</p>
+            </div>
+            <div class="input_wrap">
+              <a href="SignUpPage.html" target="_blank">Sign Up</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>const scriptURL = 'https://script.google.com/macros/s/AKfycbw5vvmeLAfLuxvlFWDOnpXhBBB1j4qB9Ly7rkt1LZUKKtOrIz3vMbvNmaiAQC3rzdPl/exec'
+      const form = document.forms['login-sheet']
+      
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Login Successfull"))
+          .catch(error => console.error('Error!', error.message))
+      })</script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
+</html>
